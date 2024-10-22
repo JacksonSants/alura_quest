@@ -34,10 +34,10 @@ void main() {
   for (var i = 0; i < skills.length; i++) {
     print("Habilidade ${i + 1}:  ${skills[i]}");
   }
-  print("Battle Royale\n");
+  print("\nBattle Royale");
   print("Começar a batalha!!\n");
   while (lifePoint > 0) {
-    print("Pontos de vida:  $lifePoint\n");
+    print("Pontos de vida:  $lifePoint");
     lifePoint -= 10;
   }
 }
