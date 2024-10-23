@@ -3,11 +3,35 @@ import '../model/Wizard.dart';
 
 void main() {
   Wizard megumi = new Wizard(
-      "Megumi", "Humano", "Arquimago", 14, 1.50, true, 500, ["Explosão"], 10000, "cajado");
+    "Megumi",
+    "Humano", 
+    "Arquimago", 
+    14, 
+    500, 
+    1.50,
+    true,
+    ["Explosion"], 
+    500, 
+    "Cajado");
   megumi.ShowRecord();
-  megumi.CastSpell();
+  megumi.castSpell();
 
   Warrior bell = new Warrior(
-      "Bell Crunell", "Humano", "Guerreiro", 14, 1.65, true, 1000, ["Fireball", "Liaris Freese", "Ox Slayer", "Argonaut", "Faca de Hestia"], 3000, 500, "Gatuno");
+      "Bell Crunell",
+      "Humano",
+      "Guerreiro",
+      14,
+      1000,
+      1.65,
+      true,
+      ["Fireball", "Liaris Freese", "Ox Slayer", "Argonaut", "Faca de Hestia"],
+      "Gatuno",
+      3000);
   bell.ShowRecord();
+
+  print("\n!!!BATTLE ROYALE!!!\n");
+
+  megumi.atacar(bell);
+  bell.atacar(megumi);
+  megumi.atacar(bell);
 }
