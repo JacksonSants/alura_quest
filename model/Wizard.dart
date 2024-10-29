@@ -1,7 +1,7 @@
 import './Person.dart';
-import './abstract/Icombate.dart';
+import 'abstract/Combate.dart';
 
-class Wizard extends Person implements Icombate {
+class Wizard extends Person implements Combate {
   int mana;
   String magicItem;
 
@@ -30,7 +30,7 @@ class Wizard extends Person implements Icombate {
   }
 
   @override
-  void atacar(Person target) {
+  void attack(Person target) {
     if (lifePoint > 0) {
       castSpell();
       print("$name lançou um ataque contra ${target.name}!");

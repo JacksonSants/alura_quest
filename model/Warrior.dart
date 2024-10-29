@@ -1,7 +1,7 @@
 import './Person.dart';
-import './abstract/Icombate.dart';
+import 'abstract/Combate.dart';
 
-class Warrior extends Person implements Icombate{
+class Warrior extends Person implements Combate{
   String Specialty;
   int defense;
 
@@ -15,7 +15,7 @@ class Warrior extends Person implements Icombate{
   }
   
   @override
-  void atacar(Person target) {
+  void attack(Person target) {
     if (lifePoint > 0) {
       print("\n${skills[4]}!!!");
       print("$name lançou um ataque contra ${target.name}!");

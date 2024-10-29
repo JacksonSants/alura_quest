@@ -31,7 +31,7 @@ void main() {
 
   print("\n!!!BATTLE ROYALE!!!\n");
 
-  megumi.atacar(bell);
-  bell.atacar(megumi);
-  megumi.atacar(bell);
+  megumi.attack(bell);
+  bell.attack(megumi);
+  megumi.attack(bell);
 }
