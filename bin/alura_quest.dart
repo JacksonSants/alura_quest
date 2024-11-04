@@ -1,37 +1,42 @@
-import '../model/Warrior.dart';
+import '../model/enum/Spell.dart';
 import '../model/Wizard.dart';
+import '../model/enum/LifeStatus.dart';
+import '../model/Person.dart';
 
 void main() {
-  Wizard megumi = new Wizard(
-    "Megumi",
-    "Humano", 
-    "Arquimago", 
-    14, 
-    500, 
+  Person person1 = new Person(
+    "Diego",
+    "Humano",
+    "Arquimago",
+    20,
+    10,
     1.50,
     true,
-    ["Explosion"], 
-    500, 
-    "Cajado");
-  megumi.ShowRecord();
-  megumi.castSpell();
+    ["Explosion"],
+    LifeStatus.Vivo,
+  );
+  person1.updateLifeStatus(person1.lifePoint);
+  person1.ShowRecord();
 
-  Warrior bell = new Warrior(
-      "Bell Crunell",
-      "Humano",
-      "Guerreiro",
-      14,
-      1000,
-      1.65,
-      true,
-      ["Fireball", "Liaris Freese", "Ox Slayer", "Argonaut", "Faca de Hestia"],
-      "Gatuno",
-      3000);
-  bell.ShowRecord();
+  Wizard mago = Wizard(
+    "Gandalf",
+    "Humano",
+    "Mago",
+    1000,
+    100,
+    1.80,
+    true,
+    ["Explosão de Fogo", "Relâmpago"],
+    LifeStatus.Vivo,
+    500,
+    "Cajado Mágico",
+    Spell.Fogo,
+  );
 
-  print("\n!!!BATTLE ROYALE!!!\n");
+  // Adicionando feitiços ao mapa
+  mago.adicionarFeitico(Spell.Fogo, 100);
+  mago.adicionarFeitico(Spell.relampaggo, 80);
 
-  megumi.attack(bell);
-  bell.attack(megumi);
-  megumi.attack(bell);
+  // Exibindo o registro do mago com os feitiços adicionados
+  mago.ShowRecord();
 }
